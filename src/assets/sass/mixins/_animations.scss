@@ -1,0 +1,20 @@
+@mixin app-slide-animation() {
+    transition-property: left, top, height;
+    transition-duration: .5s;
+    transition-delay: 0s;
+}
+
+@mixin animate-opacity(){
+    .animate-opacity {
+        opacity: 1;
+    }
+
+    .animate-opacity.ng-hide-add,
+    .animate-opacity.ng-hide-remove {
+        transition: opacity linear 0.2s;
+    }
+
+    .animate-opacity.ng-hide {
+        opacity: 0;
+    }
+}

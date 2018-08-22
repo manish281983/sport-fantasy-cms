@@ -1,0 +1,24 @@
+// responsive helpers
+@include media-query(palm) {
+    .hide-mobile{
+        display: none !important;
+    }
+}
+@include media-query(lap) {
+    .hide-ipad {
+        display: none!important;
+    }
+}
+
+@include media-query(desk) {
+    .hide-desktop {
+        display: none!important;
+    }
+}
+
+@include media-query(lap-and-up) {
+    .hide-ipad-up {
+        display: none!important;
+    }
+}
+

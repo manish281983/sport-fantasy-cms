@@ -1,0 +1,159 @@
+html,
+body {
+    height: 100%;
+    background: $background-color !important;
+    position: relative;
+}
+
+body,html {
+    overflow: hidden;
+}
+
+:focus {
+    outline: none;
+}
+
+section.app-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    margin-left: 0;
+    overflow-y: hidden;
+    padding-bottom: 0;
+    z-index: 1;
+}
+
+.content-container{
+    width: 100%;
+    padding-bottom: 100px;
+    max-height: calc(100% - #{$header-height});
+    overflow-y: scroll;
+}
+
+/* Testing this */
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+
+.floatLeft{
+    float: left;
+}
+
+.clear{
+    clear: both;
+    height: 0;
+}
+
+
+.main-headline-component{
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 5px;
+    .main-headline-component-title{
+        text-transform: uppercase;
+        font-size: $font-size-base;
+        font-weight: bold;
+    }
+
+     .main-headline-component-title:before {
+        content: '';
+        border-left: 4px solid #3f90dc;
+        padding-right:10px;
+    }
+}
+
+.box-container{
+    border: 1px solid #e1e1e1;
+    background: #fff;
+    padding: 10px;
+}
+
+
+.form-template-container{
+    .form-template-list-tbl {
+        margin-top: 15px;
+        background: #FAFAFA;
+        box-shadow: 1px 1px 2px 1px rgba(133, 133, 133, 0.50);
+        th {
+            background: #34A6E5;
+            border-bottom: solid 1px #E0E5EA;
+            color: #FFF;
+            font-size: 14px;
+            padding: 10px;
+        }
+        td {
+            font-size: 14px;
+            padding: 10px;
+            border-bottom: solid 1px #E0E5EA;
+            color:#748B99;
+
+            i{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .form-template-option{
+        text-align: right;
+    .add-delete-block {
+                width: 75px;
+                border: 1px solid $geyser-light3;
+                border-radius: 2px;
+                background-color: transparent;
+                box-shadow: 0 1px 1px 1px rgba(166, 179, 186, 0.50);
+               text-align: center;
+               padding: 5px;
+                .plus-icon, .minus-icon {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 20px;
+                    display: inline-block;
+                    text-align: center;
+                    cursor: pointer;
+                    padding-left: 0.5px;
+                }
+                .plus-icon {
+                    border: 1px solid $mountain-meadow;
+                    i {
+                        color: $mountain-meadow;
+                    }
+                    &:hover {
+                        background: $mountain-meadow;
+                        i {
+                            color: $white;
+                        }
+                    }
+                }
+                .minus-icon {
+                    border: 1px solid $sangria;
+                    i {
+                        color: $sangria;
+                    }
+                    &:hover {
+                        background: $sangria;
+                        i {
+                            color: $white;
+                        }
+                    }
+                }
+                .disabled-icon {
+                    border: 1px solid $geyser-light3;
+                    pointer-events: none;
+
+                    i {
+                        color: $geyser-light3;
+                    }
+                    &:hover {
+                        background: $white;
+                        i {
+                            color: $geyser-light3;
+                        }
+                    }
+                }
+            }
+            }
+}

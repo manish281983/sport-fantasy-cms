@@ -1,0 +1,55 @@
+<app-sub-header [title]="'PLAYERS'"></app-sub-header>
+<div class="team-squad">
+    <div class="form-template-container">
+        <div class="form-template-option">
+            <div class="add-delete-block">
+                    <span><a class="minus-icon" [class.disabled-icon]="isDisabledBtn" (click)="removeItem()"><i
+                        class="mdi mdi-minus"></i></a></span>
+                <span><a class="plus-icon" [class.disabled-icon]="!isDisabledBtn" (click)="addItem()"><i
+                    class="mdi mdi-plus"></i></a></span>
+            </div>
+        </div>
+        <table cellpadding="5" cellspacing="5" width="100%" class="form-template-list-tbl">
+            <tr>
+                <th width="30%">Name</th>
+                <th width="30%">Specialist</th>
+                <th width="30%">Role</th>
+                <th  width="10%">Actions</th>
+            </tr>
+            <tr *ngFor="let player of playerArr;let i=index;" >
+                <ng-container *ngIf="player.id !== selectedId">
+                    <td>
+                        <span>{{player.name}}</span>
+                    </td>
+                    <td>
+                        <span>{{player.specialist}}</span>
+                    </td>
+                    <td>
+                        <span>{{player.role}}</span>
+                    </td>
+                    <td>
+                        <i class="fa fa-pencil-square-o fa-2x"  (click)="editOperation(player)"></i>
+                        <i class="fa fa-trash fa-2x" (click)="deleteOperation(player, $event, i)"></i>&nbsp;
+                    </td>
+                </ng-container>
+                <ng-container *ngIf="player.id === selectedId">
+                    <td>
+                        <input  [(ngModel)]="player.name">
+                    </td>
+                    <td>
+                        <input  [(ngModel)]="player.specialist">
+                    </td>
+                    <td>
+                        <input  [(ngModel)]="player.role">
+                    </td>
+                    <td>
+                        <i class="fa fa-check fa-2x"  (click)="saveOperation(player, $event, i)"></i>
+                        <i class="fa fa-times-circle-o fa-2x" (click)="cancelOperation($event, i)"></i>&nbsp;
+                </ng-container>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,224 @@
+// Monochrome Palette
+// -------------------------
+$black: #121F26;
+$gray-darkest: #6F8086;
+$gray-darker: #3b3b3f;
+$gray-dark: #778086;
+$gray: #B1B1BC;
+$gray-light: #98A4AC;
+$gray-light2 : #CBD0D5;
+$gray-light3 : #E9EAEB;
+$gray-lighter: #EFEFF4;
+$catskill-white:#E7EFF5;
+$catskill-white1: #EBF0F5;
+$catskill-white2: #F2F6F9;
+$catskill-white3: #F3F6F9;
+$gray-chateau: #A3A8AE;
+$white: #fff;
+
+// Accent Palette
+// -------------------------
+$blue-lighter: #E4F3FF;
+$blue-light: #5ABEF6;
+$blue-light2: #78ABEF;
+$blue: #4A90E2;
+$blue-dark: #265DAB;
+$blue-darker: #00366E;
+$red: #DE2433;
+$yellow-light: #FFCE6B;
+$yellow: #FFCF45;
+$orange: #FF9821;
+$purple-light: #A06BDA;
+$purple: #7B3896;
+$green-light: #59BA59;
+$green: #46AD00;
+$cyan: #1D9EBF;
+$cyan-dark: #0986A4;
+$cyan-darker: #086E87;
+$teal-light: #53BBD3;
+$off-white : #B8D0DF;
+
+//New Color varaibles with "Name that color"
+$athens-gray: #EBEFF2;
+$athens-gray1:#E6EAEF;
+$athens-gray-light1:#EBEEF1;
+$athens-gray-light:#FAFBFC;
+$athens-gray-light2: #ECEFF2;
+$athens-gray-light3: #E6EAEE;
+$pigeon-post: #A7C3D4;
+$te-papa-green: #20333C;
+$slate-gray: #748B99;
+$slate-gray-light: #758B99;
+$slate-gray-lighter: #7B919E;
+$tan-hide : #FC9654;
+$firefly: #CA092E;
+$ebon-clay: #273740;
+$porcelain: #F5F6F7;
+$porcelain-light: #F2F4F5;
+$cat-skill-white: #E7EFF5;
+$pickled-bluewood: #243845;
+$vivid-cyan: #12A4CC;
+$botticelli: #C4D7E4;
+$ziggurat: #B8D0DF;
+$limed-spruce: #3C4952;
+$picton-blue: #34A6E4;
+$verdun-green: #447402;
+$river-bed: #43515A;
+$bunker: #121D22;
+$rolling-stone: #6E787E;
+$blue-dianne: #1D3544;
+$gable-green: #162732;
+$black-russian: #000010;
+$black-russian1: #0A0014;
+$sangria: #9E0A00;
+$deep-teal: #003238;
+$geyser: #DBE2E7;
+$geyser-light1: #DAE0E6;
+$geyser-light2: #D0D8E0;
+$geyser-light3: #CDD7DE;
+$geyser-light4: #D7DEE5;
+$geyser-light5:#DCE4EA;
+$geyser-light6:#B7C2C9;
+$jungle-mist:#C5D4DD;
+$trade-wind: #5DAC9F;
+$mountain-meadow: #19BDA3;
+$mountain-meadow1: #C1E5E2;
+$sangria: #9E0A00;
+$mystic: #DFE7EB;
+$mystic-light:#EBEFF3;
+$gull-gray: #97A9B2;
+$black-squeeze: #F5F9FC;
+$rolling-stone: #6E8086;
+$rolling-stone1: #747D81;
+$hit-gray: #A3AFB6;
+$hit-gray1: #ADB9C0;
+$hit-gray2: #ECEFF2;
+$black-squeeze-light:#F2F6F9;
+$mirage: #121F26;
+$nevada: #626F75;
+$regent-gray:#7F8D9B;
+$lynch: #637A92;
+$lynch1: #677D95;
+$nepal: #8AA4BE;
+$oslo-gray: #93979A;
+$iron: #DCDEDF;
+$dusty-gray: #979797;
+$loblolly: #C0C9D2;
+$geyser-light: #DADFE4;
+
+//globals
+$background-color : $porcelain;
+$activity-indicator-color: $picton-blue;
+
+$line-height-base:        1.428571429; // 20/14
+
+$font-size-base:          14px;
+$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
+
+// Disabled cursor for form controls and buttons.
+
+$large-border-radius:       4px;
+$base-border-radius:        3px;
+$small-border-radius:       2px;
+
+$cursor-disabled: not-allowed;
+
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   12px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  16px;
+
+$padding-small-vertical:    4px;
+$padding-small-horizontal:  8px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
+$line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.5;
+
+$border-radius-base:        4px;
+$border-radius-large:       6px;
+$border-radius-small:       3px;
+
+
+
+
+// theme colors
+$brand-primary: $blue;
+$brand-success: $green;
+$brand-info: $cyan;
+$brand-warning: $orange;
+$brand-danger: $red;
+
+// buttons
+$btn-font-weight: normal;
+
+$btn-default-color: #333;
+$btn-default-bg: #fff;
+$btn-default-border: #ccc;
+
+$btn-primary-color: #fff;
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: darken($btn-primary-bg, 5%);
+
+$btn-success-color: #fff;
+$btn-success-bg: $brand-success;
+$btn-success-border: darken($btn-success-bg, 5%);
+
+$btn-info-color: #fff;
+$btn-info-bg: $brand-info;
+$btn-info-border: darken($btn-info-bg, 5%);
+
+$btn-warning-color: #fff;
+$btn-warning-bg: $brand-warning;
+$btn-warning-border: darken($btn-warning-bg, 5%);
+
+$btn-danger-color: #fff;
+$btn-danger-bg: $brand-danger;
+$btn-danger-border: darken($btn-danger-bg, 5%);
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         $border-radius-base;
+$btn-border-radius-large:        $border-radius-large;
+$btn-border-radius-small:        $border-radius-small;
+
+
+// header
+$header-height: 50px;
+$header-navbar-height: 29px;
+$header-background: $firefly;
+$header-margin : 15px;
+
+// navbar
+$navbar-width: 280px;
+
+//forms
+$input-color-placeholder:   $gray;
+
+// list view
+$list-width: 380px;
+
+$summary-initial-width: 10px;
+$summary-total-width : 320px;
+
+$left-section-width: 350px;
+$ipad-left-section-width: 320px;
+
+//Control panel width
+$controlpanel-initial-width: 80px;
+$controlpanel-total-width : 155px;
+
+//WBS tree
+$wbs-section-width: 400px;
+$wbs-cell-height: 70px;
+$wbs-form-height:100px;
+
+$activity-border-color: #40ACE6;
+$actvitiy-background-color: #F6FBFF;
+$duration-color: #BDC9D0;
+$input-suffix-color: #98AAB5;
+
+

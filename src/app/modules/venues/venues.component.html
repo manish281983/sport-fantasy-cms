@@ -1,0 +1,48 @@
+<app-sub-header [title]="'VENUES'"></app-sub-header>
+<div class="venues">
+<div class="form-template-container">
+    <div class="form-template-option">
+        <div class="add-delete-block">
+                    <span><a class="minus-icon" [class.disabled-icon]="isDisabledBtn" (click)="removeItem()"><i
+                        class="mdi mdi-minus"></i></a></span>
+            <span><a class="plus-icon" [class.disabled-icon]="!isDisabledBtn" (click)="addItem()"><i
+                class="mdi mdi-plus"></i></a></span>
+        </div>
+    </div>
+    <table cellpadding="5" cellspacing="5" width="100%" class="form-template-list-tbl">
+        <tr>
+            <th width="40%">City</th>
+            <th width="40%">Ground</th>
+            <th  width="10%">Actions</th>
+        </tr>
+        <tr *ngFor="let venue of venueArr;let i=index;" >
+            <ng-container *ngIf="venue.id !== selectedId">
+                <td>
+                    <span>{{venue.city}}</span>
+                </td>
+                <td>
+                    <span>{{venue.ground}}</span>
+                </td>
+                <td>
+                    <i class="fa fa-pencil-square-o fa-2x"  (click)="editOperation(venue)"></i>
+                    <i class="fa fa-trash fa-2x" (click)="deleteOperation(venue, $event, i)"></i>&nbsp;
+                </td>
+            </ng-container>
+            <ng-container *ngIf="venue.id === selectedId">
+                <td>
+                    <input  [(ngModel)]="venue.city">
+                </td>
+                <td>
+                    <input  [(ngModel)]="venue.ground">
+                </td>
+                <td>
+                    <i class="fa fa-check fa-2x"  (click)="saveOperation(venue, $event, i)"></i>
+                    <i class="fa fa-times-circle-o fa-2x" (click)="cancelOperation($event, i)"></i>&nbsp;
+            </ng-container>
+        </tr>
+    </table>
+
+</div>
+</div>
+
+

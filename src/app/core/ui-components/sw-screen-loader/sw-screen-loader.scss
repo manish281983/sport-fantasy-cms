@@ -1,0 +1,79 @@
+@import "~assets/sass/variables";
+
+$loader-gap: 20;
+
+.screen-loader-box {
+    width: 95px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    margin: auto;
+    .loader-lbl {
+        font-size: $font-size-large;
+        color: $slate-gray-lighter;
+        width: 100%;
+        text-align: center;
+    }
+
+    .loader-box {
+        position: relative;
+        width: 270px;
+        height: 33px;
+        margin: auto;
+
+        .loader {
+            position: absolute;
+            top: 0;
+            background-color: $slate-gray-lighter;
+            width: 12px;
+            height: 12px;
+            animation-name: bounce_loader;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            transform: scale(.3);
+            border-radius: 21px;
+        }
+
+        .loader1 {
+            left: 0px;
+            animation-delay: 0s;
+        }
+
+        .loader2 {
+            left: $loader-gap + px;
+            animation-delay: 0.15s;
+        }
+
+        .loader3 {
+            left: $loader-gap * 2+ px;
+            animation-delay: 0.30s;
+        }
+
+        .loader4 {
+            left: $loader-gap * 3+ px;
+            animation-delay: 0.45s;
+        }
+
+        .loader5 {
+            left: $loader-gap * 4+ px;
+            animation-delay: 0.60s;
+        }
+
+        @keyframes bounce_loader {
+            0% {
+                transform: scale(1);
+                background-color: $slate-gray-lighter;
+            }
+
+            100% {
+                transform: scale(1);
+                background-color: transparent;
+            }
+        }
+    }
+}

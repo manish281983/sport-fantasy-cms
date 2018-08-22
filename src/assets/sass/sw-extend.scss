@@ -1,0 +1,43 @@
+/* Base Components */
+
+@import "base/base.code";
+//@import "pxd-base/base.flexbox";  /* using flexboxgrid.com in place of pxd grid system */
+@import "base/base.forms";
+@import "base/base.headings";
+@import "base/base.iconography";
+@import "base/base.tables";
+@import "base/base.viewport";
+/* Generic Components */
+@import "base/generic.box-sizing";
+@import "base/generic.helpers";
+@import "base/generic.normalize";
+/* Objects Components */
+@import "base/objects.button-group";
+@import "base/objects.buttons";
+@import "base/objects.flag";
+@import "base/objects.input-group";
+//@import "pxd-base/objects.layout";
+@import "base/objects.list-bare";
+@import "base/objects.list-inline";
+@import "base/objects.list-ui";
+@import "base/objects.toggle";
+/* Trump Components */
+@import "base/trumps.clearfix";
+
+@import 'variables';
+@import 'responsive';
+@import 'mixins';
+@import 'flexboxgrid';
+@import 'core';
+@import 'buttons';
+@import 'lists';
+@import 'header';
+@import 'modal';
+@import "iconography";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+<div class="message-display-box" [hidden]="!messageObj.show ">
+    <img src="assets/images/{{messageImg || 'error-img.png'}}" [hidden]="messageObj.hideMessageImg"/>
+    <div class="message-lbl">{{messageObj.title || 'Oops, something went wrong!'}}</div>
+    <div class="message-link"
+         (click)="messageLinkAction()"
+         [hidden]="hideMessageLink">{{messageObj.messageLink || 'Please Try Again'}}
+    </div>
+</div>

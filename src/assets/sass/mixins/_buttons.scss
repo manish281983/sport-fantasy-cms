@@ -1,0 +1,63 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    &:focus,
+    &.btn--focus {
+        color: $color;
+        background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+    }
+    &:hover {
+        color: $color;
+        background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+    }
+    &:active,
+    &.btn--active {
+        color: $color;
+        background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+        &:hover,
+        &:focus,
+        &.btn--focus {
+            color: $color;
+            background-color: darken($background, 17%);
+            border-color: darken($border, 25%);
+        }
+    }
+    &:active,
+    &btn--active {
+        background-image: none;
+    }
+    &.btn--disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.btn--focus,
+        &:active,
+        &.btn--active {
+            background-color: $background;
+            border-color: $border;
+            color: $color;
+        }
+    }
+
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}

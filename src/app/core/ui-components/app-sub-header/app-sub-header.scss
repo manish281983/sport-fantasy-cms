@@ -1,0 +1,11 @@
+@import "~assets/sass/variables";
+@import '~assets/sass/base/tools.responsive';
+
+
+
+.subHeader{
+    padding: 10px 5px;
+    color: $white;
+    font-size: $font-size-large;
+background: radial-gradient(circle at 10% 0%, #000, 10%, #3E3E3E 30%);
+}

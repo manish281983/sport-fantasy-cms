@@ -1,0 +1,48 @@
+<app-sub-header [title]="'TEAMS'"></app-sub-header>
+<div class="teams">
+    <div class="form-template-container">
+        <div class="form-template-option">
+            <div class="add-delete-block">
+                    <span><a class="minus-icon" [class.disabled-icon]="isDisabledBtn" (click)="removeItem()"><i
+                        class="mdi mdi-minus"></i></a></span>
+                <span><a class="plus-icon" [class.disabled-icon]="!isDisabledBtn" (click)="addItem()"><i
+                    class="mdi mdi-plus"></i></a></span>
+            </div>
+        </div>
+        <table cellpadding="5" cellspacing="5" width="100%" class="form-template-list-tbl">
+            <tr>
+                <th width="35%">Name</th>
+                <th width="35%">Theme</th>
+                <th  width="20%">Actions</th>
+            </tr>
+            <tr *ngFor="let team of teamArr;let i=index;" >
+                <ng-container *ngIf="team.id !== selectedId">
+                    <td>
+                        <span>{{team.name}}</span>
+                    </td>
+                    <td>
+                        <span><div  [ngStyle]="{'background-color': getTeamTheme(team.theme)}">&nbsp;</div></span>
+                    </td>
+                    <td>
+                        <i class="fa fa-address-book-o fa-2x" aria-hidden="true" (click)="goToTeamSquad(team)"></i>
+                        <i class="fa fa-pencil-square-o fa-2x"  (click)="editOperation(team)"></i>
+                        <i class="fa fa-trash fa-2x" (click)="deleteOperation(team, $event, i)"></i>&nbsp;
+                    </td>
+                </ng-container>
+                <ng-container *ngIf="team.id === selectedId">
+                    <td>
+                        <input  [(ngModel)]="team.name">
+                    </td>
+                    <td>
+                        <input  [(ngModel)]="team.theme">
+                    </td>
+                    <td>
+                        <i class="fa fa-check fa-2x"  (click)="saveOperation(team, $event, i)"></i>
+                        <i class="fa fa-times-circle-o fa-2x" (click)="cancelOperation($event, i)"></i>&nbsp;
+                </ng-container>
+            </tr>
+        </table>
+
+    </div>
+
+</div>

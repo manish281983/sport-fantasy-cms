@@ -1,0 +1,8 @@
+<div class="snack-bar-box" [class.open]="showSnackBar">
+    <div class="snack-bar-content success"
+         [class.open]="showSnackBar"
+         [ngClass]="{'success':type, 'error':!type,'disable':!enabled}">
+        <div class="snack-bar-message" [innerHTML]="message | highlight:highlightText"></div>
+        <span class="close-icon pull-right"><i (click)="close()" class="mdi mdi-close"></i></span>
+    </div>
+</div>

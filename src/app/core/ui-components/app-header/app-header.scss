@@ -1,0 +1,44 @@
+@import "~assets/sass/variables";
+@import '~assets/sass/base/tools.responsive';
+
+.headerActive {
+        background: $header-background !important;
+    }
+.core-header {
+    .header-info {
+    max-width: 1200px;
+    min-width: auto;
+    margin: 0 auto;
+    position: relative;
+
+    .header-logo{
+        float: left;
+    }
+
+
+
+    .header-top-section {
+        padding-top: 2px;
+        margin: 15px 0 0 10px;
+        color: #fff;
+        text-transform: uppercase;
+        .header-title {
+            color: $athens-gray;
+            line-height: .8;
+                font-size: 32px;
+        }
+        .header-sub-title {
+            color: $athens-gray;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+    }
+
+    .header-bottom-section{
+
+    }
+}
+
+}
+

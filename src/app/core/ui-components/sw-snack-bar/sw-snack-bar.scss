@@ -1,0 +1,69 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~assets/sass/variables";
+@import '~assets/sass/base/tools.responsive';
+
+.snack-bar-box {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    max-height: 0;
+    background-color: transparent;
+    text-align: center;
+    transition: 1s;
+    z-index: 999;
+    &.open {
+        max-height: 200px;
+    }
+
+    .snack-bar-content {
+        height: 100%;
+        width: 470px;
+        margin: 0 auto;
+        text-align: left;
+        padding: 8px 10px;
+        display: inline-block;
+        color: $white;
+        font-size: $font-size-base;
+        &.success {
+            background: $mountain-meadow;
+        }
+
+        &.error {
+            background: $sangria;
+        }
+
+        &.disable {
+            background:$geyser-light6;
+        }
+
+        .close-icon {
+            position: relative;
+            top: 2px;
+            margin-left: 10px;
+            i {
+                color: $white;
+            }
+        }
+
+        .snack-bar-message {
+            display: inline-block;
+            width: calc(100% - 25px);
+            .text-highlight {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@include media-query(palm) {
+    .snack-bar-box {
+        position: fixed;
+
+        .snack-bar-content {
+            width: 90%;
+            font-size: $font-size-small;
+        }
+
+    }
+
+}
